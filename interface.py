@@ -86,7 +86,7 @@ prompt_prefix = st.text_input('Prompt prefix')
 
 #data = st.file_uploader("Upload a CSV")
 
-data = "../data.csv"
+data = "data.csv"
 query = st.text_area("Insert your query")
 
 if st.button("Submit Query", type="primary"):
