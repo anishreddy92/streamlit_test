@@ -75,7 +75,7 @@ def write_response(response: dict):
             st.image(data, use_column_width=True)
 
 
-model_option=st.selectbox(label="Select the model", options=["gpt-35-turbo","gpt-3.5-turbo-1106","llm_gpt35_instruct"], args=None, kwargs=None,  placeholder="Choose an option", disabled=False, label_visibility="visible")
+model_option=st.selectbox(label="Select the model", options=["gpt-3.5-turbo","gpt-3.5-turbo-1106","llm_gpt35_instruct"], args=None, kwargs=None,  placeholder="Choose an option", disabled=False, label_visibility="visible")
 
 st.title("👨‍💻 Chat with your CSV")
 
