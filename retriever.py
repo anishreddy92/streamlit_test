@@ -5,7 +5,7 @@ import pandas as pd
 import langchain
 import re
 
-df=pd.read_csv("../data.csv")
+df=pd.read_csv("data.csv")
 
 def run_query_save_results():
     res = [list(df[column].unique()) for column in df.columns if column in ["Stage","HUB","REV Opportunity Source"]]
