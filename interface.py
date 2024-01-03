@@ -42,7 +42,7 @@ def check_password():
             st.session_state["password_correct"] = False
 
     # Return True if the username + password is validated.
-    if st.session_state.get("password_correct", False):
+    if st.sidebar.session_state.get("password_correct", False):
         return True
 
     # Show inputs for username + password.
