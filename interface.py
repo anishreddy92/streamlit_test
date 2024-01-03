@@ -60,7 +60,7 @@ def logout():
     st.session_state["password_correct"] = False
 
 # Logout button
-if st.session_state.get("password_correct", True):
+if st.session_state.get("password_correct", False):
     st.button("Log out", on_click=logout)
 
 # Function to check if the data represents an image (plot)
