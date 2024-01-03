@@ -42,7 +42,7 @@ def check_password():
             st.session_state["password_correct"] = False
 
     # Return True if the username + password is validated.
-    if st.sidebar.session_state.get("password_correct", False):
+    if st.session_state.get("password_correct", False):
         return True
 
     # Show inputs for username + password.
@@ -59,10 +59,9 @@ if not check_password():
 def logout():
     st.session_state["password_correct"] = False
 
-# Logout button
-if st.get("password_correct", False):
-    st.session_state.button("Log out", on_click=logout)
-
+# Sidebar for logout button
+if st.session_state.get("password_correct", False):
+    st.sidebar.button("Log out", on_click=logout)
 # Function to check if the data represents an image (plot)
 def is_image(data):
     try:
